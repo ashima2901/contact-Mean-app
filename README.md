@@ -23,10 +23,8 @@ This program is technical exercise Contact MEAN stack.
 * Angular v5.2.3
 * Node.js v9.5.0
 
-## Cloning the Project for Personal Use
+
 ### Installation
-1. Clone this repo `git clone https://github.com/stanleyeosakul/mean-crud-example.git`
-1. `cd` into the folder of the cloned repo
 1. Run `yarn install` to install dependencies
 1. Configure your keys file `config/keys.js`
     * From the root directory, create the keys file `touch config/keys.js`

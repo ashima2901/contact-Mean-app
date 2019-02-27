@@ -1,0 +1,49 @@
+<div class="fadein">
+  <h1 class="title">Contact List
+    <a [routerLink]="['/contact-create']" class="button is-link is-outlined"><i class="fas fa-plus"></i>Add</a>
+  </h1>
+  <div class="example-container mat-elevation-z8">
+    <div class="example-header">
+      <mat-form-field>
+        <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+      </mat-form-field>
+    </div>
+    <mat-table #table [dataSource]="dataSource" matSort>
+
+
+      <!-- Name Column -->
+      <ng-container matColumnDef="name">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Name</mat-header-cell>
+        <mat-cell *matCellDef="let element"><a class="button is-text" [routerLink]="['/contact-details', element._id]">{{element.name}}</a>
+        </mat-cell>
+      </ng-container>
+
+      <!-- Title Column -->
+      <ng-container matColumnDef="title">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Title</mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.title}}</mat-cell>
+      </ng-container>
+
+      <!-- Birth Date Column -->
+      <ng-container matColumnDef="birthDate">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Date of Birth</mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.birthDate | date}}</mat-cell>
+      </ng-container>
+
+      <!-- Favorite Column -->
+      <ng-container matColumnDef="favorite">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Favorite</mat-header-cell>
+        <mat-cell *matCellDef="let element"><i *ngIf="element.isFavorite" class="fas fa-heart"></i></mat-cell>
+      </ng-container>
+
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+
+    <mat-paginator #paginator
+                   [pageSize]="5"
+                   [pageSizeOptions]="[5, 10, 20]"
+                   [showFirstLastButtons]="true">
+    </mat-paginator>
+  </div>
+</div>

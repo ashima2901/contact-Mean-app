@@ -1,0 +1,22 @@
+<div class="fadein">
+  <section class="hero is-link">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title">{{ contact?.title }}</h1>
+        <h2 class="subtitle">Name: {{ contact?.name }}</h2>
+        <h2 class="subtitle">Date of Birth: {{ contact?.birthDate }}</h2>
+        <h2 class="subtitle">Favorite: {{ contact?.isFavorite }}</h2>
+      </div>
+    </div>
+    <div class="columns">
+      <div class="column">
+        <button class="button is-warning" routerLink="/contacts"><i class="fas fa-arrow-left"></i>Back</button>
+        <a *ngIf="contact" style="margin: 3px" class="button is-success" [routerLink]="['/contact-edit', contact?._id]"><i
+          class="far fa-edit"></i>Edit</a>
+        <a *ngIf="!contact" style="margin: 3px" class="button is-success"><i class="far fa-edit"></i>Edit</a>
+        <button class="button is-danger" (click)="deleteContact(contact?._id)"><i class="far fa-trash-alt"></i>Delete
+        </button>
+      </div>
+    </div>
+  </section>
+</div>

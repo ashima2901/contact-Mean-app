@@ -1,0 +1,49 @@
+<div class="fadein">
+  <h1 class="title">Update Contact</h1>
+  <div class="columns">
+    <div class="column">
+      <form #contactForm="ngForm" (ngSubmit)="updateContact(contact._id)">
+        <div class="field">
+          <div class="control">
+            <label for="title">Title</label>
+            <input *ngIf="contact" required name="title" id="title" [(ngModel)]="contact.title" type="text"
+                   class="input" [value]="contact.title">
+          </div>
+        </div>
+        <div class="field">
+          <div class="control">
+            <label for="name">Name</label>
+            <input *ngIf="contact" required name="name" id="name" [(ngModel)]="contact.name" type="text" class="input"
+                   [value]="contact.name">
+          </div>
+        </div>
+        <div class="field">
+          <div class="control">
+            <label for="birthDate">BirthDate</label>
+            <input required [matDatepicker]="picker" class="input dateInput" placeholder="Choose a date"
+                   [(ngModel)]="contact.birthDate" name="birthDate" id="birthDate" (click)="picker.open()"
+                   [value]="contact.birthDate">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+
+            <mat-datepicker #picker></mat-datepicker>
+          </div>
+        </div>
+        <div class="field">
+          <div class="control">
+            <label for="fav">Favorite</label>
+            <select required [(ngModel)]="contact.isFavorite" id="fav" class="input" name="fav">
+              <option value="true" [selected]="contact.isFavorite">YES</option>
+              <option value="false" [selected]="!contact.isFavorite">NO</option>
+            </select>
+          </div>
+        </div>
+        <div class="field">
+          <div class="control">
+            <button class="button is-warning" routerLink="/contacts"><i class="fas fa-arrow-left"></i>Back</button>
+            <button class="button is-link" type="submit" [disabled]="!contactForm.valid">Update</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

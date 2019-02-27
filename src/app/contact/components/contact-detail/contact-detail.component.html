@@ -4,8 +4,8 @@
       <div class="container">
         <h1 class="title">{{ contact?.title }}</h1>
         <h2 class="subtitle">Name: {{ contact?.name }}</h2>
-        <h2 class="subtitle">Date of Birth: {{ contact?.birthDate }}</h2>
-        <h2 class="subtitle">Favorite: {{ contact?.isFavorite }}</h2>
+        <h2 class="subtitle">Date of Birth: {{ contact?.birthDate | date}}</h2>
+        <h2 class="subtitle">Favorite: {{ contact?.isFavorite ? 'YES' : 'NO' }}</h2>
       </div>
     </div>
     <div class="columns">

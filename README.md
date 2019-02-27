@@ -5,7 +5,16 @@ Author : Ashima Arora
 This program is technical exercise Contact MEAN stack.
 
 <p align="center">
-    <img width="500" height="308" src="./src/assets/pics/homepage.png"><br>
+    <img width="500" height="308" src="./src/assets/pics/home.PNG"><br>
+</p>
+<p align="center">
+    <img width="500" height="308" src="./src/assets/pics/contactList.png"><br>
+</p>
+<p align="center">
+    <img width="500" height="308" src="./src/assets/pics/datePicker.png"><br>
+</p>
+<p align="center">
+    <img width="500" height="308" src="./src/assets/pics/detail.PNG"><br>
 </p>
 
 ## Versions
@@ -51,6 +60,7 @@ This program is technical exercise Contact MEAN stack.
 * [Angular 5](https://angular.io/)
 * [Bulma CSS Framework v0.62](https://bulma.io/)
 * [Font-Awesome v5.0.6](https://fontawesome.com/)
+* [Angular Material](https://material.angular.io/) For data table supports sorting, pagination and filtering.
 
 ### Back-end
 * [Express](https://expressjs.com/)

@@ -11,7 +11,7 @@ This program is technical exercise Contact MEAN stack.
     <img width="500" height="308" src="./src/assets/pics/contactList.png"><br>
 </p>
 <p align="center">
-    <img width="500" height="308" src="./src/assets/pics/datePicker.png"><br>
+    <img width="500" height="308" src="./src/assets/pics/datePicker.PNG"><br>
 </p>
 <p align="center">
     <img width="500" height="308" src="./src/assets/pics/detail.PNG"><br>
